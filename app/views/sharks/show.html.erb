@@ -1,10 +1,21 @@
-<p style="color: green"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-<%= render @shark %>
+<p>
+  <strong>Name:</strong>
+  <%= @shark.name %>
+</p>
+
+<p>
+  <strong>Facts:</strong>
+  <%= @shark.facts %>
+</p>
+
+<h2>Posts</h2>
+<%= render 'sharks/posts' %>
+
+<%= link_to 'Edit', edit_shark_path(@shark) %> |
+<%= link_to 'Back', sharks_path %>
 
 <div>
-  <%= link_to "Edit this shark", edit_shark_path(@shark) %> |
-  <%= link_to "Back to sharks", sharks_path %>
-
-  <%= button_to "Destroy this shark", @shark, method: :delete %>
+  <%= render 'sharks/all' %>
 </div>
