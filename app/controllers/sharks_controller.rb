@@ -3,7 +3,11 @@ class SharksController < ApplicationController
 
   # GET /sharks or /sharks.json
   def index
-    @sharks = Shark.all
+    if params[:query].present?
+      @sharks = Shark.where("name like ?", "%#{params[:query]}%")
+    else
+      @sharks = Shark.all
+    end
   end
 
   # GET /sharks/1 or /sharks/1.json
