@@ -31,6 +31,8 @@ gem "jbuilder"
 gem "redis", "~> 4.0"
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.x'
+gem 'font-awesome-rails', '~>4.x'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
